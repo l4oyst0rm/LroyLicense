@@ -1,4 +1,4 @@
-![header](https://github.com/l4oyst0rm/LroyLicense/blob/main/assets/image_2025-06-25_232233107.png)
+![header](https://github.com/l4oyst0rm/LroyLicense/blob/main/assets/image_2025-06-25_233408199.png)
 
 ---
 <p align="center">
