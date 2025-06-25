@@ -1,0 +1,6 @@
+{
+  "botToken": "put discord token",
+  "clientId": "put bot discord id",
+  "guildId": "put server id discord",
+  "admins": ["put your id discord"]
+}
