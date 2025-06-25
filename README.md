@@ -1,65 +1,112 @@
-```
-❗ GitHub has example code & system info, not the full code or functions!
-```
+![header](https://github.com/user-attachments/assets/65046709-27c3-417f-8053-3a6f8d5ea29d)
 
-# 🚀 LroyLicense System
-
-Hey there! Welcome to **LroyLicense System**, a slick and affordable license server solution built by L4oySt0rm for your product. For just **$10**, you get a fully configurable, optimized, and secure system that’s perfect for protecting your software. It’s lightweight, fast, and packed with features to keep your licenses safe and your users happy!
+---
+<p align="center">
+  <h3 align="center">
+    🗣️ Discord: https://discord.gg/vQCjCPJa5Z  📚  Docs: Coming Soon
+  </h3>
+  <h3 align="center">
+    🏢 Full Version: https://discord.gg/vQCjCPJa5Z
+  </h3>
+</p>
 
 ---
 
-## 🎉 Why Choose LroyLicense?
+> [!WARNING]
+> This GitHub repo contains only example code and system information for LroyLicense, not the full code or functionality. For the complete system, check out our full version at [Discord Ticket](https://discord.gg/vQCjCPJa5Z) or contact us on [Discord](https://discord.gg/vQCjCPJa5Z). We provide no support for the example code and are not liable for any issues arising from its use.
 
-This isn’t just another license system—it’s a powerhouse designed to make your life easier. Here’s what you get:
+* [🚀 Quick Start](#-quick-start)
+  * [🔥 Installation](#-installation)
+  * [🔥 Manual Installation](#-manual-installation)
+* [🕵️ What is LroyLicense?](#-what-is-lroylicense)
+* [✨ Features](#-features)
+* [🔑 License Verification Examples](#-license-verification-examples)
+  * [Java Example](#java-example)
+  * [JavaScript Example](#javascript-example)
+  * [Pseudocode Example](#pseudocode-example)
+* [🔐 Developer Notes](#-developer-notes)
+* [👨‍💻 About the Creator](#-about-the-creator)
+* [🐞 Reporting Bugs](#-reporting-bugs)
+* [🤝 Contributing](#-contributing)
+* [🙌 Acknowledgements](#-acknowledgements)
+* [📬 Contact](#-contact)
+* [📜 License](#-license)
 
-- **Node.js Support**: Runs smoothly with Node.js for easy integration.
-- **Discord Bot Support**: Manage licenses right from your Discord server.
-- **Web Dashboard**: A secure site to monitor and manage licenses.
-- **Top-Notch Security**: Protects against phishing and unauthorized license checks.
-- **Free Data Storage**: No extra costs for storing license data.
-- **Rate Limiting**: Keeps your server safe from spam requests.
-- **DDoS Protection**: Built-in defenses against attacks.
-- **Anti-Bot Measures**: Stops bots from sniffing around your licenses.
-- **Easy Setup**: Get up and running in minutes.
-- **Clear Console Logs**: Know exactly what’s happening with detailed logs.
-- **No Lag**: Super optimized, runs like a dream.
-- **Low Resource Usage**: Works on servers with just 1GB RAM and 50% CPU.
-- **Free 24/7 Support**: We’ve got your back, anytime!
+## 🚀 Quick Start
 
----
+### 🔥 Installation
 
-## 🛠️ Recommended Hosting
-
-Want a hassle-free experience? Try **WardenHosting**! They offer free setup and lightning-fast support, making them the perfect home for LroyLicense.
-
----
-
-## 🚀 Quick Installation
-
-Getting started is a breeze with just **two steps**:
+Get your license server up in **two steps**:
 
 1. **Install Dependencies**:
-   Open your terminal and run:
    ```bash
    npm install express express-rate-limit discord.js node-fetch@2
    ```
 
 2. **Start the Server**:
-   Launch the system with:
    ```bash
    node run.js --trace-warnings
    ```
 
-That’s it! Your license server is now live and ready to roll.
+Your server is live! Check [Configuration](#-developer-notes) for setup details.
+
+### 🔥 Manual Installation
+
+For hands-on setup:
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/L4oySt0rm/LroyLicense.git
+   ```
+2. Navigate to the folder:
+   ```bash
+   cd LroyLicense
+   ```
+3. Install dependencies:
+   ```bash
+   npm install express express-rate-limit discord.js node-fetch@2
+   ```
+4. Configure `config.js` (see [Developer Notes](#-developer-notes)).
+5. Run the server:
+   ```bash
+   node run.js --trace-warnings
+   ```
+
+---
+
+## 🕵️ What is LroyLicense?
+
+**LroyLicense System** is a lightweight, secure, and affordable ($10) license server built by L4oySt0rm to protect your software. It’s designed for developers who need a fast, reliable way to manage licenses with minimal hassle. With Node.js support, a Discord bot, and a web dashboard, it’s perfect for small apps or large projects. The system is optimized to run on low-spec servers (1GB RAM, 50% CPU) and includes robust security to keep your licenses safe.
+
+---
+
+## ✨ Features
+
+LroyLicense is packed with tools to make license management a breeze:
+
+- **Node.js Support**: Easy integration with Node.js apps.
+- **Discord Bot**: Manage licenses directly in Discord.
+- **Web Dashboard**: Secure interface for license monitoring.
+- **Anti-Phishing & Anti-Bot**: Blocks unauthorized license checks.
+- **Free Data Storage**: No extra costs for license data.
+- **Rate Limiting**: Protects your server from spam.
+- **DDoS Protection**: Built-in defenses against attacks.
+- **Easy Setup**: Up and running in minutes.
+- **Clear Console Logs**: Detailed, colorful logs for debugging.
+- **Low Resource Usage**: Runs smoothly on minimal hardware.
+- **Free 24/7 Support**: Get help anytime via Discord.
+
+> [!TIP]
+> Host with **WardenHosting** for free setup and fast support. Perfect for LroyLicense!
 
 ---
 
 ## 🔑 License Verification Examples
 
-Want to integrate LroyLicense into your app? Below are example code snippets for **Java**, **JavaScript**, and **Pseudocode** to validate license keys. These are simple, generic demos to get you started.
+Integrate LroyLicense with these example snippets for **Java**, **JavaScript**, and **Pseudocode**. These are demos, not the full system—get the complete version at [Discord Ticket](https://discord.gg/vQCjCPJa5Z).
 
 ### Java Example
-This uses `java.net.http` for requests and `org.json` for JSON parsing, with retry logic and console logging.
+Uses `java.net.http` and `org.json` for HTTP requests and JSON parsing.
 
 ```java
 import java.net.http.HttpClient;
@@ -121,35 +168,35 @@ public class LicenseVerifier {
     }
 
     private static void logSuccess(String licenseKey, JSONObject license) {
-        System.out.println("License valid!");
+        System.out.println("✅ License valid!");
         System.out.println("Key: " + obfuscateKey(licenseKey));
         System.out.println("Product: " + license.optString("productName"));
         System.out.println("Expires: " + license.optString("expired"));
     }
 
     private static void logError(String message) {
-        System.err.println("ERROR: " + message);
+        System.err.println("❌ ERROR: " + message);
         System.err.println("Contact support: https://support.your-site.com");
     }
 
     private static String obfuscateKey(String key) {
         if (key == null || key.length() <= 4) return key;
-        return key.substring(0, 4) + "*".repeat(key.length - 4);
+        return key.substring(0, 4) + "*".repeat(key.length() - 4);
     }
 
     public static void main(String[] args) {
         boolean isValid = validateLicense("sample-key-1234");
-        System.out.println("License check result: " + (isValid ? "Valid" : "Invalid"));
+        System.out.println("License check: " + (isValid ? "Valid" : "Invalid"));
     }
 }
 ```
 
 **Usage**:
-- Replace `your-product`, `your-api-key`, and `https://your-license-server.com/`.
-- Needs `org.json:json` and Java 11+.
+- Requires `org.json:json` and Java 11+.
+- Replace `your-product`, `your-api-key`, and `https://your-license-server.com`.
 
 ### JavaScript Example
-This uses `fetch` in Node.js, with retries and console logging.
+Uses `node-fetch` in Node.js for HTTP requests.
 
 ```javascript
 const fetch = require('node-fetch');
@@ -203,14 +250,14 @@ class LicenseVerifier {
     }
 
     static logSuccess(licenseKey, license) {
-        console.log('License valid!');
+        console.log('✅ License valid!');
         console.log(`Key: ${this.obfuscateKey(licenseKey)}`);
         console.log(`Product: ${license.productName}`);
         console.log(`Expires: ${license.expired}`);
     }
 
     static logError(message) {
-        console.error(`ERROR: ${message}`);
+        console.error(`❌ ERROR: ${message}`);
         console.error('Contact support: https://support.your-site.com');
     }
 
@@ -222,17 +269,17 @@ class LicenseVerifier {
 
 (async () => {
     const isValid = await LicenseVerifier.validateLicense('sample-key-1234');
-    console.log(`License check result: ${isValid ? 'Valid' : 'Invalid'}`);
+    console.log(`License check: ${isValid ? 'Valid' : 'Invalid'}`);
 })();
 ```
 
 **Usage**:
-- Install `node-fetch` (`npm install node-fetch`).
+- Install `node-fetch` (`npm install node-fetch@2`).
 - Update `your-product`, `your-api-key`, and server URL.
 - Runs in Node.js.
 
 ### Pseudocode Example
-A high-level overview for any language.
+A language-agnostic guide for license verification.
 
 ```
 FUNCTION validateLicense(licenseKey)
@@ -252,20 +299,20 @@ FUNCTION validateLicense(licenseKey)
             IF response.statusCode = 200
                 PARSE response as JSON into license
                 IF license.status = "active" AND license.productName = "your-product"
-                    LOG "License valid!"
+                    LOG "✅ License valid!"
                     LOG "Key: " + obfuscateKey(licenseKey)
                     LOG "Product: " + license.productName
                     LOG "Expires: " + license.expired
                     RETURN true
                 ELSE
-                    LOG "ERROR: Invalid license: " + license.status
+                    LOG "❌ ERROR: Invalid license: " + license.status
                 ENDIF
             ELSE
-                LOG "ERROR: Server error: HTTP " + response.statusCode
+                LOG "❌ ERROR: Server error: HTTP " + response.statusCode
             ENDIF
         CATCH error
             IF attempts = maxRetries
-                LOG "ERROR: Server unreachable after " + maxRetries + " tries: " + error.message
+                LOG "❌ ERROR: Server unreachable after " + maxRetries + " tries: " + error.message
                 RETURN false
             ENDIF
             WAIT 1 second
@@ -283,66 +330,76 @@ ENDFUNCTION
 ```
 
 **Usage**:
-- Adapt to your programming language.
+- Implement in any language.
 - Replace placeholders with real values.
 
 ---
 
-## 🔐 Notes for Developers
+## 🔐 Developer Notes
 
 - **Dependencies**:
-  - Server: `express`, `express-rate-limit`, `discord.js`.
+  - Server: `express`, `express-rate-limit`, `discord.js`, `node-fetch@2`.
   - Java client: `org.json:json`, Java 11+.
-  - JavaScript client: `node-fetch`.
+  - JavaScript client: `node-fetch@2`.
   - Pseudocode: No dependencies.
-- **Security**: Store API keys in a `config.js` or environment variables, not hardcoded.
-- **Customization**: Tweak server URLs, product names, and logs to fit your needs.
-- **Support Link**: Update `https://support.your-site.com` with your actual support channel.
+- **Security**: Store API keys in `config.js` or environment variables, not hardcoded.
+- **Configuration**: Create `config.js`:
+  ```javascript
+  module.exports = {
+    product: 'your-product',
+    apiKey: 'your-api-key',
+    serverUrl: 'https://your-license-server.com',
+    discordBotToken: 'your-discord-bot-token',
+    supportLink: 'https://support.your-site.com'
+  };
+  ```
+- **Customization**: Adjust server URLs, product names, and logs to fit your project.
+- **Support**: Update `https://support.your-site.com` and Discord links.
 
 ---
 
-## 👨‍💻 Meet the Team
+## 👨‍💻 About the Creator
 
-- **L4oySt0rm** - Project Owner, Designer, and Optimization Guru. Reach out on Discord for collabs or questions!
-- **Looking for Collaborators** - Got skills in Node.js, Discord bots, or web dev? Join the project and let’s make LroyLicense even better!
+- **L4oySt0rm**: The brains behind LroyLicense, handling design and optimization. Connect on [Discord](https://discord.gg/vQCjCPJa5Z) for support or collabs!
+- **Open to Collaborators**: Skilled in Node.js, Discord bots, or web dev? Join us to level up LroyLicense!
 
 ---
 
-## 🐞 Reporting Issues
+## 🐞 Reporting Bugs
 
-Run into a glitch? Open an issue on our [GitHub repo](https://github.com/L4oySt0rm/LroyLicense). We’ll jump on it ASAP!
+Hit a bug? Open an issue on our [GitHub repo](https://github.com/L4oySt0rm/LroyLicense). We’ll tackle it fast!
 
 ---
 
 ## 🤝 Contributing
 
-Love the project and want to help? Here’s how to contribute:
+Want to make LroyLicense better? Here’s how to contribute:
 
 1. Fork the repo.
-2. Create a branch (`git checkout -b feature/cool-new-thing`).
-3. Commit your changes (`git commit -m "Added cool new thing"`).
-4. Push to your branch (`git push origin feature/cool-new-thing`).
+2. Create a branch: `git checkout -b feature/awesome-update`.
+3. Commit changes: `git commit -m "Added awesome update"`.
+4. Push: `git push origin feature/awesome-update`.
 5. Open a Pull Request.
 
 ---
 
 ## 🙌 Acknowledgements
 
-Big shoutout to everyone who’s supported this project! Special thanks to L4oySt0rm for building something awesome and making it accessible for all.
+Big thanks to L4oySt0rm for building and open-sourcing this project, and to the community for testing and feedback!
 
 ---
 
 ## 📬 Contact
 
-- **L4oySt0rm** - Hit me up on Discord for support, collabs, or just to chat!
-- **Support**: Check out our [Discord server](https://discord.gg/your-discord-link) for 24/7 help.
+- **L4oySt0rm**: Reach out on [Discord](https://discord.gg/vQCjCPJa5Z) for support or collabs.
+- **Support**: Join our [Discord server](https://discord.gg/vQCjCPJa5Z) for 24/7 help.
 
 ---
 
 ## 📜 License
 
-LroyLicense System is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+LroyLicense System is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Ready to secure your product?** Grab LroyLicense today and take control of your licenses with style and ease! 🚀
+**Ready to protect your software?** Get the full LroyLicense System at [Discord Ticket](https://discord.gg/vQCjCPJa5Z) and secure your licenses with ease! 🚀
