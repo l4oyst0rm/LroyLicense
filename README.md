@@ -1,3 +1,7 @@
+```
+❗ GitHub has example code & system info, not the full code or functions!
+```
+
 # 🚀 LroyLicense System
 
 Hey there! Welcome to **LroyLicense System**, a slick and affordable license server solution built by L4oySt0rm for your product. For just **$10**, you get a fully configurable, optimized, and secure system that’s perfect for protecting your software. It’s lightweight, fast, and packed with features to keep your licenses safe and your users happy!
@@ -47,28 +51,6 @@ Getting started is a breeze with just **two steps**:
    ```
 
 That’s it! Your license server is now live and ready to roll.
-
----
-
-## 🖥️ Manual Installation (For the DIY Folks)
-
-Prefer to do things by hand? Here’s how:
-
-1. Clone or download the repository:
-   ```bash
-   git clone https://github.com/L4oySt0rm/LroyLicense.git
-   ```
-2. Move the files to your server directory.
-3. Install dependencies (same as above):
-   ```bash
-   npm install express express-rate-limit discord.js
-   ```
-4. Run the server:
-   ```bash
-   node run.js --trace-warnings
-   ```
-5. Configure your API keys and server URL in `config.js` (check the docs for details).
-6. Access the web dashboard to activate your license system.
 
 ---
 
